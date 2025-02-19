@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>server-comms</title>
+    <title>Frontend to Backend</title>
 </head>
 <body>
-    <h1>Server Comms</h1>
-    <button onclick="fetchData()">GET</button>
+    <h1>Frontend to Backend Test</h1>
+    <button onclick="fetchData()">Get Data</button>
     <p id="response"></p>
+
     <script>
         function fetchData() {
             fetch("http://localhost:3000/data")
@@ -17,7 +18,6 @@
                     document.getElementById("response").innerText = data.message;
                 })
                 .catch(error => console.error("Error:", error));
-        
         }
     </script>
 </body>
